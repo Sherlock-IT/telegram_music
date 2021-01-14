@@ -13,7 +13,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 class Parser:
     def parser_links(self):
-        URL = 'https://sefon.pro/best/'
+        URL =  bot.site_link + '/best/'
         HEADERS = {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36',
         }
@@ -47,7 +47,8 @@ class Parser:
             cur.execute(f"INSERT INTO music_links(url) VALUES('{db_music}')")
         except:
             return False
-        connection.close()
+        finally:
+            connection.close()
         return True
 
     def send_music(self, music):
