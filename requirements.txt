@@ -1,0 +1,6 @@
+telethon==1.19.0
+requests==2.25.1
+beautifulsoup4==4.9.3
+mutagen==1.45.1
+psycopg2-binary==2.8.6
+selenium==3.141.0
